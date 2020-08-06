@@ -1,0 +1,7 @@
+{
+    "students" : [
+        {"name" : "Nguyen Van A", "age" : "10", "gender" : "nam", "idclass" : "1"},
+        {"name" : "Nguyen Van B", "age" : "22", "gender" : "nu", "idclass" : "1"},
+        {"name" : "Nguyen Van C", "age" : "30", "gender" : "nam", "idclass" : "1"}
+    ]
+}
