@@ -16,7 +16,7 @@ class database:
         
     def deleteTable(self, nametb):
         collist = mydb.list_collection_names()
-        if "nametb" not in collist:
+        if nametb not in collist:
             print("The collection not exists. ")
         else: 
             nametb.drop()
@@ -26,17 +26,17 @@ class database:
         mycol.insert_one(student)
         print("Thêm thành công")
 
-    def insertAll(self, data):
-        mycol.insert_many(data)
-        print("Thêm thành công. ")
+    # def insertAll(self, data):
+    #     mycol.insert_many(data)
+    #     print("Thêm thành công. ")
 
-    def deleteStudent(self, idstudent):
-        myquery = { "id" : "idstudent" }
+    def deleteStudent(self, nameS):
+        myquery = { "name" : nameS }
         mycol.delete_one(myquery)
         print('xóa thành công')
     
-    def getone(self, idstudent):
-        myquery = { "id" : "idstudent" }
+    def getone(self, nameS):
+        myquery = { "name" : nameS }
         mydoc = mycol.find(myquery)
         for x in mydoc:
             print(x)
