@@ -1,0 +1,40 @@
+git init // bat dau git vs 1 du an
+git add tenfile or git add. // luu thay doi 1 file
+git commit -m "mota" //
+git log // xem lich su commit
+git show idcommit // xem thay doi cua file da commit
+git diff // xem thay doi nhung file da dc modified  -- an Q de out
+
+// working directory -- thu muc lam viec
+// staging area  -- luu tru tap hop thu muc dc add nhung chua commit	
+// git repository -- luu tru tap hop nhung commit
+
+git k // hien thi giao dien nguoi dung cua git
+git checkout --tenfile // xoa bo thay doi 1 so file chua len staging area
+git reset HEAD tenfile // unstage ( bỏ add file)
+git reset --soft idcommit // quay lại commit mà mình chỉ định và mở ra những commit đằng sau commit mà mình chỉ định, file ở staging area
+git reset --mixed idcommit // quay lại commit mà mình chỉ định và mở ra những commit đằng sau commit mà mình chỉ định, file ở working directory 
+git reset --hard idcommit // bỏ hẳn commit trên đường đi, xóa hết thay đổi của file
+
+git revert idcommit // tạo ra 1 commit ở trên vào đảo ngược lại commit truyền vào (nguy hiểm)
+
+.gitignore // những thư mục đc lưu trong gitignore sẽ dc ẩn khỏi working area trong git
+git branch // xem dang co nhung nhanh nao trong git
+
+git checkout -b tenbranch  // tao ra branch moi va checkout den branch đó
+git checkout tenbranch =)) chuyen den lam viec o branch do
+
+git merge tenbranchb (merge branchb vao  branch dang lam viec)
+
+git branch -d tenbranch // xoa branch
+
+git remote add origin linkgithubofproject
+git remote -v
+git push -u origin master
+
+git clone linkrepo
+git pull
+
+
+//push a branch
+git push tên branch

@@ -5,7 +5,7 @@ my = mongo.database()
 
 
 
-# with open('json.json') as data_file:
+# with open('d:/Python/WithMogoDB/json.json') as data_file:
 #     data = json.load(data_file)
 #     for x in data["students"]:
 #         student = mongo.Students(x["name"], x["age"], x["gender"], x["idclass"])
@@ -15,10 +15,10 @@ my = mongo.database()
 
 # data_file.close()
 
-## lay ra thong tin cua 1 hoc sinh
+# # lay ra thong tin cua 1 hoc sinh
 # namestudent = "Nguyen Van A"
 # my.getone(namestudent)
 
-##xoa 1 hoc sinh
-namestudent = "Nguyen Van A"
-my.deleteStudent(namestudent)
+# #xoa 1 hoc sinh
+# namestudent = "Nguyen Van A"
+# my.deleteStudent(namestudent)

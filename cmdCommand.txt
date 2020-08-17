@@ -1,0 +1,83 @@
+1) help danh sách lệnh CMD
+
+2) cd chuyển thư mục, ví dụ cd c:\windows, chuyển đến thư mục gốc cd \, chuyển đến thư mục cha cd ..
+
+3) assoc danh sách các phần mở rộng file và chương trình mở mặc định
+
+4) cipher /w:c đảo lộn dữ liệu vùng đĩa trống ổ c (làm cho các file đã xóa không thể phục hồi)
+
+5) driverquery -v hiện thị thông tin các trình điều khiển cài đặt trong máy
+
+6) ipconfig thông tin về IP kết nối mạng. ipconfig /renew yêu cầu một IP mới, ipconfig /flushdns xóa bộ đệm dns
+
+7) netstat xem các kết nối mạng, netstat -an xem các cổng đang mở và IP liên quan
+
+8) ping ví dụ ping 192.168.1.1, ping google.com gửi mẫu tin nhỏ đến một IP để xem phản hồi
+
+9) powercfg lệnh quản lý nguồn của máy. powercfg /hibernate on[/off] bật tắt chế độ hibernate, powercfg /a xem trang thái tiết kiệm điện, powercfg /batteryreport báo cáo tình trạng pin
+
+10) shutdown tắt máy
+
+11) sfc /scannow kiểm tra và sửa chữa các file hệ thống
+
+12) tasklist tasklist -v, tasklist -svc, tasklist -m thông tin các chương trình đang chạy
+
+13) systeminfo thông tin hệ thống
+
+14) dir liệt kê file/thư mục trong thư mục hiện tại, hoặc dir path-dir
+
+15) tree xem cây thư mục hiện tại hoặc tree path-dir
+
+16) copy copy file
+
+17) lệnh > tên-file xuất kết quả lệnh ra file. dir c:\ > a.txt kết quả lệnh dir lưu ở file a.txt
+
+18) nhấn ctrl+c ngắt lệnh đang thi hành
+
+19) nhấn F3 gọi lại lệnh gần nhất
+
+11. Lệnh TASKKILL.
+Cú pháp: taskkill /f /im "tên ứng dụng".exe.
+
+Ví dụ taskkill /f /im Skype.exe (tắt ứng dụng Skype).
+
+Công dụng: Tắt một ứng dụng đang chạy.
+7. Lệnh DEL.
+Cú pháp: DEL [/p][/f][/s][/q][/a[[:]attributes]] "tên file cần xóa"
+
+- /p: Hiển thị thông tin file trước khi xóa.
+
+- /f: Xóa các file có thuộc tính chỉ đọc (read-only).
+
+- /s: Xóa file đó trong tất cả các thư mục có chứa.
+
+- /q: Xóa không cần hỏi.
+
+- /a[[:]attributes]: Xóa theo thuộc tính của file (R: Read-only files, S: System files, H: Hidden files).
+
+Xóa tất cả file *.*
+
+Công dụng: Xóa file.
+
+8. Lệnh COPY.
+Cú pháp: COPY "địa chỉ cần copy" "địa chỉ lưu file copy" /y
+
+- /y: Copy không cần hỏi.
+
+Công dụng: Copy file từ thư mục này sang thư mục khác trong máy tính.
+
+9. Lệnh RD.
+Cú pháp: RD /s /q "thư mục cần xóa"
+
+- /s: Xóa toàn bộ thư mục.
+
+- /q: Xóa không cần hỏi.
+
+Công dụng: Lệnh RD giúp các bạn xóa thư mục.
+
+10. Lệnh MD.
+Cú pháp: MD "đường dẫn lưu file cần tạo"\"tên thư mục cần tạo"
+
+Ví dụ: md "C:\Thu" (tạo thư mục Thu trong ổ đĩa C).
+
+Công dụng: Tạo thư mục mới.

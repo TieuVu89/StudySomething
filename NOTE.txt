@@ -1,0 +1,2 @@
+LÀM side báo cáo về những gì đã học
+python, git, request và response, html,css

@@ -1,0 +1,53 @@
+Request: Là client gửi yêu cầu lên server
+Response: Là kết quả từ server trả về cho client
+
+Khi bạn lên trình duyệt browser gõ một địa chỉ nào đó
+thì ngay lập tức trình duyệt sẽ dựa vào tên domain để gửi yêu cầu truy cập đến địa chỉ IP mà domain này đang trỏ tới, 
+lúc này phía server sẽ phân tích yêu cầu và sẽ gửi luồng xử lý tới vị trí vị trí lưu trữ của mã nguồn 
+và nhiệm vụ của các mã nguồn là tiếp nhận yêu cầu, phân tích request đó và trả kết quả lại cho client.
+có hai phương thức pho bien để gửi request từ client lên server đó là sử dụng phương thức GET và phương thức POST.
+Khi bạn gửi request thì sẽ có rất nhiều thông tin đính kèm theo bao gồm các thông tin của trình duyệt đang sử dụng, 
+địa chỉ IP của mạng mà máy tính bạn đang kết nối và nhiều thông tin khác.
+Tất cả được chia làm hai nhóm chính sau: nhoms header va nhom chua du lieu
+
+
+Reponse là dữ liệu mà server trả về cho client. kết quả trả về (response) chính là giao diện của website và 
+các thông tin của header.
+ Như vậy dữ liệu mà server trả về là những đoạn mã HTML kèm theo các thông tin của header
+Browser sẽ dựa vào các thông tin này để hiển thị trạng thái kết quả của request,
+ còn mã HTML dùng để hiển thị giao diện của website.
+ Nếu bạn nhập vào một URL không tồn tại thì thông tin của header sẽ không có gì 
+
+HTTP REQUEST message
+Gồm 3 phần chính là: Request line, Header và Body. Dữ liệu được chia thành các dòng và định dạng kết thúc dòng là <CR><LF>
+. Riêng dòng cuối cùng của gói tin sẽ được báo hiệu bằng 2 lần định dạng kết thúc: <CR><LF><CR><LF>.
+Request line là dòng đầu tiên của gói HTTP Request, bao gồm 3 trường: phương thức (method), đường dẫn (path –
+ có nhiều bài viết gọi là URL hoặc URI cho trường này) và phiên phản giao thức (HTTP version).
+Phương thức (method) có thể là: GET, POST, HEAD, PUT và DELETE. Hai phương thức phổ biến nhất là GET và POST, 
+trong ví dụ trên là phương thức GET thường dùng để yêu cầu tài nguyên cung cấp trong trường URL.
+Đường dẫn (path) dùng để định danh nguồn tài nguyên mà client yêu cầu, bắt buộc phải có ít nhất là dấu “/”.
+Phiên bản giao thức (HTTP version): là phiên bản HTTP client đang sử dụng (thường là HTTP/1.0 hoặc HTTP/1.1)
+Tiếp theo là các dòng Header, các dòng này là không bắt buộc, viết ở định dạng “Name:Value” 
+cho phép client gửi thêm các thông tin bổ sung về thông điệp HTTP request và thông tin về chính client. 
+Một số header thông dụng như:
+Accept: loại nội dung có thể nhận được từ thông điệp response. Ví dụ: text/plain, text/html
+Accept-Encoding: các kiểu nén được chấp nhận. Ví dụ: gzip, deflate, xz, exi…
+Connection: tùy chọn điều khiển cho kết nối hiện thời. Ví dụ: Keep-Alive, Close…
+Cookie: thông tin HTTP Cookie từ server
+Cuối cùng là phần Body, là dữ liệu gửi từ client đến server trong gói tin HTTP request. 
+Đa số các gói tin gửi theo phương thức GET sẽ có Body trống, các phương thức như POST hay PUT thường dùng để gửi 
+dữ liệu nên sẽ có bao gồm dữ liệu trong trường Body.
+
+HTTP RESPONSE
+Dòng Status line gồm 3 trường là phiên bản giao thức (HTTP version), mã trạng thái (Status code) và mô tả  trạng thái (Status text):
+Phiên bản giao thức (HTTP version): phiên bản của giao thức HTTP mà server hỗ trợ, thường là HTTP/1.0 hoặc HTTP/1.1
+Mã trạng thái (Status code): mô tả trạng thái kết nối dưới dạng số, mỗi trạng thái sẽ được biểu thị bởi một số nguyên. 
+Ví dụ: 200, 404, 302,…
+Mô tả trạng thái (Status text): mô tả trạng thái kết nối dưới dạng văn bản một cách ngắn gọn,
+ giúp người dùng dễ hiểu hơn so với mã trạng thái. 
+Ví du: 200 OK, 404 Not Found, 403 Forbiden,…
+Các dòng Header line của gói tin response có chức năng tương tựn như gói tin request,
+ giúp server có thể truyền thêm các thông tin bổ sung đến client dưới dạng các cặp “Name:Value”.
+Phần Body là nơi đóng gói dữ liệu để trả về cho client,
+ thông thường trong duyệt web thì dữ liệu trả về sẽ ở dưới dạng một trang 
+HTML để trình duyệt có thể thông dịch được và hiển thị ra cho người dùng.

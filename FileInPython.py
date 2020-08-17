@@ -8,7 +8,7 @@ file.close()
 print(data)
 
 # mo file o che do ghi
-file = open('Vong lap.py','w')
+file = open('1Vong lap.py','w')
 # ghi file
 file.write('#Tieu Vu')
 # dong file
